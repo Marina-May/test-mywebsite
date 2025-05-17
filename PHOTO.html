@@ -1,0 +1,57 @@
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <title>Photo Display</title>
+ <style>
+ body{
+background:black;
+ margin: 0;
+ }
+ img.preview{
+ width: 150px;
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+
+    #fullscreen {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeIn 0.3s ease;
+    }
+
+    #fullscreen img {
+      max-width: 90%;
+      max-height: 90%;
+      animation: zoomIn 0.3s ease;
+      cursor: zoom-out;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+ </style>
+</head>
+ <body>
+ <img src="C:\Users\USER\Desktop\TEST\Soundness Test.jpeg"alt="Click to view fullscreen" class="preview" onclick="openFullscreen(this.src)">
+                        <p>Figure 1: Soundness Test</p>
+						<img src="C:\Users\USER\Desktop\TEST\Acidity or Basicity of a liquid sample.jpeg" alt="Click to view fullscreen" class="preview" onclick="openFullscreen(this.src)">
+                        <p>Figure 2: Acidity or Basicity of a liquid sample</p>
+						<img src="C:\Users\USER\Desktop\TEST\Fineness Test.jpeg"alt="Click to view fullscreen" class="preview" onclick="openFullscreen(this.src)">
+                        <p>Figure 3: Fineness Test</p>
+						<img src="C:\Users\USER\Desktop\TEST\Slump Test.jpg" alt="Click to view fullscreen" class="preview" onclick="openFullscreen(this.src)">
+                        <p>Figure 4: Slump Test</p>
+					</body>
+				</html>
